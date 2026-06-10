@@ -1,0 +1,11 @@
+---
+Language: Cpp
+UseTab: Never
+IndentWidth: 4
+ContinuationIndentWidth: 0
+
+InsertBraces: true
+BreakBeforeBraces: Mozilla
+AllowShortFunctionsOnASingleLine: None
+
+InsertNewlineAtEOF: true
