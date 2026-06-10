@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Kitware/CMake/master/Help/manual/presets/schema.json",
+    "version": 11,
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 3,
+        "patch": 2
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "build",
+            "cacheVariables": {
+                "CMAKE_CONFIGURATION_TYPES": "Debug;Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "hidden": true,
+            "configurePreset": "default",
+            "jobs": 0
+        },
+        {
+            "name": "dbg",
+            "inherits": [
+                "default"
+            ],
+            "configuration": "Debug"
+        },
+        {
+            "name": "rel",
+            "inherits": [
+                "default"
+            ],
+            "configuration": "Release"
+        }
+    ]
+}
